@@ -1,0 +1,270 @@
+html, body {
+    overflow-y: scroll;
+}
+
+.wrapper {
+    padding: 0 80px;
+}
+
+
+/* ------ SLIDER/LANDING PAGE -------*/
+.landing-page {
+    height: 100vh;
+}
+.slider, 
+.slider > div {
+    /* Images default to Center Center. Maybe try 'center top'? */
+    background-position: center center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    overflow: hidden;
+    -moz-transition: transform .4s;
+    -o-transition: transform .4s;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+}
+
+.slider > div {
+    position: absolute;
+}
+
+.slider > i {
+    color: #2C286E;
+    position: absolute;
+    font-size: 60px;
+    margin: 20px;
+    top: 40%;
+    text-shadow: 0 10px 2px #223422;
+    transition: .3s;
+    width: 30px;
+    padding: 10px 13px;
+    background: #fff;
+    background: rgba(255, 255, 255, .3);
+    cursor: pointer;
+    line-height: 0;
+    box-sizing: content-box;
+    border-radius: 3px;
+    z-index: 4;
+}
+
+.slider > i svg {
+    margin-top: 3px;
+}
+
+.slider > .left {
+    left: -100px;
+}
+.slider > .right {
+    right: -100px;
+}
+.slider:hover > .left {
+    left: 0;
+}
+.slider:hover > .right {
+    right: 0;
+}
+
+.slider > i:hover {
+    background:#fff;
+    background: rgba(255, 255, 255, .8);
+    transform: translateX(-2px);
+}
+
+.slider > i.right:hover {
+    transform: translateX(2px);
+}
+
+.slider > i.right:active,
+.slider > i.left:active {
+    transform: translateY(1px);
+}
+
+.slider:hover > div {
+    transform: scale(1.01);
+}
+
+.hoverZoomOff:hover > div {
+    transform: scale(1);
+}
+
+.slider > ul {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 4;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-50%);
+}
+
+.slider > ul > li {
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    list-style: none;
+    float: left;
+    margin: 10px 5px 0;
+    cursor: pointer;
+    border: 1px solid gray;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.slider > ul > .showli {
+    background-color: #2C286E;
+    -moz-animation: boing .5s forwards;
+    -o-animation: boing .5s forwards;
+    -webkit-animation: boing .5s forwards;
+    animation: boing .5s forwards;
+} 
+
+
+.slider > .show {
+    z-index: 1;
+}
+
+.hideDots > ul {
+    display: none;
+}
+
+.showArrows > .left {
+    left: 0;
+}
+
+.showArrows > .right {
+    right: 0;
+}
+
+@keyframes boing {
+    0% {
+        transform: scale(1.2);
+    }
+    40% {
+        transform: scale(.6);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    80% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*------- ABOUT SECTION -----------*/
+
+section {
+    background-color: #fff;
+    height: 100vh;
+}
+
+.about-section {
+    padding: 110px 0 60px;
+    display: flex;
+}
+
+.about-school {
+    padding: 0 100px 30px 100px;
+}
+
+.about-school h2 {
+    font-family: 'roboto', sans-serif;
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 15px;
+    color: #2C286E;
+    text-transform: uppercase;
+}
+
+.line {
+    border-bottom: 3px solid #2C286E;
+    width: 10%;
+}
+
+.about-school p {
+    color: #2C286E;
+    padding: 30px 0 20px 0;
+}
+
+.about-school a {
+    color: white;
+    background-color: #2C286E;
+    padding: 10px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.about-school a:hover {
+    border: 2px solid #2C286E;
+    background: #fff;
+    color: #2c286e;
+}
+
+.map-section iframe {
+    padding: 10px 0;
+}
+
+/* ----- LANDING PAGE MOBILE VERSION ----- */
+@media only screen and (max-width: 935px) {
+    
+    /* LANDING PAGE */
+    .slider div {
+        background-position: center right;
+    }
+    .landing-page {
+        height: 53vh;
+    }
+
+
+    /* ABOUT SECTION */
+    .wrapper {
+        padding: 2rem;
+    }
+    .about-section {
+        padding: 60px 0 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .about-school {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .about-school h2 {
+        font-size: 25px;
+        line-height: 30px;
+    }    
+    .about-school p {
+        color: #2C286E;
+        padding: 30px 0 20px 0;
+        margin-bottom: 2rem;
+    }    
+    .about-school a {
+        color: white;
+        background-color: #2C286E;
+        padding: 10px 25px;
+        border-radius: 10px;
+        text-decoration: none;
+    }    
+    .about-school a:hover {
+        border: 2px solid #2C286E;
+        background: #fff;
+        color: #2c286e;
+    }
+    .map-section iframe {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+}
