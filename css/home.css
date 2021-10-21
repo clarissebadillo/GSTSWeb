@@ -248,7 +248,7 @@ section {
     .about-school p {
         color: #2C286E;
         padding: 30px 0 20px 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }    
     .about-school a {
         color: white;
@@ -263,6 +263,7 @@ section {
         color: #2c286e;
     }
     .map-section iframe {
+        margin-top: 1rem;
         padding: 10px 0;
         width: 100%;
     }
