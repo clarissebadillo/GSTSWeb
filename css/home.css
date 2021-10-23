@@ -264,6 +264,36 @@ section {
     text-decoration: underline;
 }
 
+
+/*-------- ADMISSION SECTION ----------- */
+.admission-section {
+    background-color: #2C286E;
+    width: 100%;
+    height: 55vh;
+    text-align: center;
+    color: white;
+}
+
+.admission-section h1 {
+    margin: 0;
+    padding-top: 55px;
+    padding-bottom: 1rem;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.admission-section p {
+    padding-bottom: 40px;
+}
+
+.admission-section a {
+    color: white;
+    border: 2px solid white;
+    padding: 10px 35px;
+    text-decoration: none;
+}
+
 /* ----- LANDING PAGE MOBILE VERSION ----- */
 @media only screen and (max-width: 935px) {
     
@@ -340,5 +370,11 @@ section {
     .programs-container .btn-program {
         font-size: 14px;
         padding: .5rem .7rem;
+    }
+
+    /* ADMISSION SECTION */
+    .admission-section {
+        height: 100%;
+        padding: 0 0 3rem 0;
     }
 }
